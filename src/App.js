@@ -21,7 +21,23 @@ function App() {
         //validação dos input
          if (form.peso > 0 && form.altura > 0 ){
             const imc = form.peso / (form.altura * form.altura);
-            return alert("Seu IMC é " + imc.toFixed(1));
+            if (imc < 18.5)
+            return alert("Seu IMC é " + imc.toFixed(1)+ " - VOCÊ ESTA A BAIXO DO PESO.")
+
+            else if (imc >= 18.5 && imc <= 24.9)
+            return alert("Seu IMC é " + imc.toFixed(1)+ " - PESO NORMAL.")
+
+            else if (imc >= 18.5 && imc <= 29.9)
+            return alert("Seu IMC é " + imc.toFixed(1)+ " - PRÉ-OBESIDADE.")
+
+            else if (imc >= 30.0 && imc <= 34.9)
+            return alert("Seu IMC é " + imc.toFixed(1)+ " - OBESIDADE GRAU 1.")
+
+            else if (imc >= 35.0 && imc <= 39.9)
+            return alert("Seu IMC é " + imc.toFixed(1)+ " - OBESIDADE GRAU 2.")
+
+            else if (imc >= 40.0)
+            return alert("Seu IMC é " + imc.toFixed(1)+ " - OBESIDADE GRAU 3.")
                         
           }
           else if (form.peso === "" && form.altura === ""){
