@@ -12,11 +12,8 @@ function App() {
   function handleChange(event) {
    
     setForm({ ...form, [event.target.name]: event.target.value });
-
-    
   }
 
- 
 
   //função para enviar
   function handleSubmit(event) {
